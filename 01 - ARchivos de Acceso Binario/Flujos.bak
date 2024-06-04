@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+FILE *archivo;
+
+int main()
+{
+	archivo = fopen("texto.txt", "w");
+	if(archivo == NULL)
+	{
+		printf("El archivo no se pudo crear\n");
+		return 1;
+	}
+	
+	printf("Saludos Programas!!!!!");
+	fprintf(archivo, "Saludos Programas!!!!!");
+	
+	fclose(archivo);
+	return 0;	
+}
